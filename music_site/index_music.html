@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>Generic Music Site/Label Site</Title>
+        <link rel='stylesheet' href="styles.css">
+        
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav-bar">
+                <ion-icon name="bluetooth-outline"></ion-icon>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">MUSIC</a></li>
+                    <li><a href="#">MERCH</a></li>
+                    <li><a href="#">CONNECT</a></li>
+                </ul>
+            </div>
+            <div class = "content">
+                <div class ="left-col">
+                    <h1>EAT.<br>SLEEP.<br>GRIND.</h1>
+                    <p class ="quote"><i>WE WILL NOT BE DENIED</i></p>
+                </div>
+                <div class="right-col">
+                    <p><b>Click Here To Listen</b></p>
+                    <img src="images/play.png" id = "icon">
+                </div>
+
+            </div>
+        </div>
+        <audio id = "mySong">
+            <source src="media/song.mp3" type="audio/mp3">
+        </audio>
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+<script>
+    var song = document.getElementById("mySong");
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function(){
+        if(song.paused){
+            song.play();
+        }
+        else{
+            song.pause();
+        }
+    }
+</script>    
+    
+    </body>
+
+</html>
